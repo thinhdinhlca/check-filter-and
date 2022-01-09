@@ -9,8 +9,8 @@ window.function = function (filter, category, delimiter) {
     return "";
   }
 
-  let filter_arr = filter.value.split(delimiter);
-  let cat_arr = category.value.split(delimiter);
+  let filter_arr = filter.split(delimiter);
+  let cat_arr = category.split(delimiter);
   let res = "";
   
   for (let i = 0; i < filter_arr.length; i++) {
