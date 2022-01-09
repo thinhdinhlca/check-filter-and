@@ -6,11 +6,11 @@ window.function = function (filter, category, delimiter) {
   delimiter = delimiter.value ?? ',';
   
   if(filter.length == 0) {
-    return "";
+    return true;
   }
 
-  let filter_arr = filter.split(delimiter);
-  let cat_arr = category.split(delimiter);
+  let filter_arr = filter.split(delimiter).map(item => item.toLowerCase().trim());
+  let cat_arr = category.split(delimiter).map(item => item.toLowerCase().trim());
   let res = "";
   
   for (let i = 0; i < filter_arr.length; i++) {
