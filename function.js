@@ -7,16 +7,14 @@ window.function = function (filter, category, delimiter) {
 
   let filter_arr = filter.value.split(delimiter);
   let cat_arr = category.value.split(delimiter);
+  let res = "";
   
-  const isInCategory = (filter) => {
-    for (let i = 0; i < cat_arr.length; i++) {
-      if (filter == cat_arr[i]) {
-        return true;
+  for (let i = 0; i < filter_arr.length; i++) {
+    if(cat_arr.includes(filter_arr[i]) == false) {
+        res = false;
         break;
-      } else return false;
-    }
-  
-  let res = filter_arr.every(isInCategory);
+    } else res = true;
+  }
     
   return res;
 
