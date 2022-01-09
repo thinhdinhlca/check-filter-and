@@ -4,6 +4,10 @@ window.function = function (filter, category, delimiter) {
   filter = filter.value ?? "";
   category = category.value ?? "";
   delimiter = delimiter.value ?? ',';
+  
+  if(filter.length == 0) {
+    return "";
+  }
 
   let filter_arr = filter.value.split(delimiter);
   let cat_arr = category.value.split(delimiter);
