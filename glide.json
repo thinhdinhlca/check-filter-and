@@ -22,7 +22,7 @@
       }
     ],
     "result": {
-      "type": "string"
+      "type": "boolean"
     }
   }
 ]
