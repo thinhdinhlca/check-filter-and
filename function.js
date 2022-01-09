@@ -1,22 +1,23 @@
 
-window.function = function (data, sort_keys, delimiter, final_delimiter) {
-  if (data.value === undefined) return undefined;
-  if (sort_keys.value === undefined) return undefined;
+window.function = function (filter, category, delimiter) {
   
+  filter = filter.value ?? "";
+  category = category.value ?? "";
   delimiter = delimiter.value ?? ',';
-  final_delimiter = final_delimiter.value ?? "\n";
 
-  var data_arr = data.value.split(delimiter);
-  var keys_arr = sort_keys.value.split(delimiter);
-  var obj = {};
-  for (i=0; i<data_arr.length; i++) {
-    obj[data_arr[i]] = keys_arr[i];
-  }
-
-  var sorted = Object.keys(obj).sort(function(a,b){return obj[a]-obj[b]});
-
-  var joined = sorted.join(final_delimiter);
-
-  return joined;
+  let filter_arr = filter.value.split(delimiter);
+  let cat_arr = category.value.split(delimiter);
+  
+  const isInCategory = (filter) => {
+    for (let i = 0; i < cat_arr.length; i++) {
+      if (filter == cat_arr[i]) {
+        return true;
+        break;
+      } else return false;
+    }
+  
+  let res = filter_arr.every(isInCategory);
+    
+  return res;
 
 }
