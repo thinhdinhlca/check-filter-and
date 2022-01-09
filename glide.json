@@ -1,28 +1,23 @@
 [
   {
     "kind": "column",
-    "name": "Joined list - Sort by keys descendingly",
-    "description": "Sort Joined List by secondary joined list - descendingly",
-    "author": "Darren Murphy",
+    "name": "Check a filter with AND condition",
+    "description": "",
+    "author": "Thinh Dinh <thinh@lowcode.agency>",
     "params": [
       {
-        "name": "data",
-        "displayName": "Joined List - data",
+        "name": "filter",
+        "displayName": "List of filters",
         "type": "string"
       },
       {
-        "name": "sort_keys",
-        "displayName": "Joined List - sort keys",
+        "name": "categories",
+        "displayName": "List of categories to compare the filter to",
         "type": "string"
       },
       {
         "name": "delimiter",
-        "displayName": "String delimiter",
-        "type": "string"
-      },
-      {
-        "name": "final_delimiter",
-        "displayName": "Result delimiter",
+        "displayName": "List delimiters, default to comma",
         "type": "string"
       }
     ],
