@@ -17,7 +17,7 @@
       },
       {
         "name": "delimiter",
-        "displayName": "List delimiters, default to comma",
+        "displayName": "List delimiter, default to comma",
         "type": "string"
       }
     ],
